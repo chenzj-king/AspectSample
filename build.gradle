@@ -1,0 +1,43 @@
+buildscript {
+
+    ext.versions = [
+            code      : 1,
+            name      : '1.0.0',
+
+            minSdk    : 15,
+            targetSdk : 23,
+            compileSdk: 27,
+            buildTools: '27.0.3',
+
+            // Library versions
+            junit     : '4.12',
+            support   : '27.1.0',
+            multidex  : '1.0.3',
+    ]
+
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url "http://nexus.demo580.com/nexus/content/repositories/AndroidResp"
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.0'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url "http://nexus.demo580.com/nexus/content/repositories/AndroidResp"
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
