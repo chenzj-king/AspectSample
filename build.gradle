@@ -6,24 +6,22 @@ buildscript {
 
             minSdk    : 15,
             targetSdk : 23,
-            compileSdk: 27,
-            buildTools: '27.0.3',
+            compileSdk: 30,
+            buildTools: '30.0.3',
 
             // Library versions
             junit     : '4.12',
-            support   : '27.1.0',
+            support   : '28.0.0',
             multidex  : '1.0.3',
     ]
 
     repositories {
         google()
-        jcenter()
-        maven {
-            url "http://nexus.demo580.com/nexus/content/repositories/AndroidResp"
-        }
+        maven { url "https://maven.aliyun.com/repository/public" }
     }
+
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.0'
+        classpath 'com.android.tools.build:gradle:7.0.4'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
     }
 }
@@ -31,10 +29,7 @@ buildscript {
 allprojects {
     repositories {
         google()
-        jcenter()
-        maven {
-            url "http://nexus.demo580.com/nexus/content/repositories/AndroidResp"
-        }
+        maven { url "https://maven.aliyun.com/repository/public" }
     }
 }
 

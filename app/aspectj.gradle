@@ -1,14 +1,14 @@
 repositories {
-    jcenter()
     google()
+    maven { url "https://maven.aliyun.com/repository/public" }
 }
 
 buildscript {
     repositories {
-        jcenter()
+        maven { url "https://maven.aliyun.com/repository/public" }
     }
     dependencies {
-        classpath 'org.aspectj:aspectjtools:1.8.13'
+        classpath 'org.aspectj:aspectjtools:1.9.7'
     }
 }
 
